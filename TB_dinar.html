@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FFJB STORE - Jual Beli Akun FF Aman Rekber</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>body{font-family:'Poppins',sans-serif;background:#0a0a0a}</style>
+</head>
+<body class="text-white">
+<!-- NAV -->
+<nav class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-orange-500/20 px-4 py-3 flex justify-between items-center">
+  <div class="font-black text-xl tracking-wider"><span class="text-orange-500">FFJB</span> STORE</div>
+  <div class="flex gap-2">
+    <a href="#list" class="px-4 py-2 bg-white/10 rounded-full text-sm">Beli Akun</a>
+    <a href="#jual" class="px-4 py-2 bg-orange-500 text-black font-bold rounded-full text-sm">Jual Akun</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="px-6 py-12 text-center bg-gradient-to-b from-orange-500/20 to-transparent">
+  <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">JB AKUN FF<br><span class="text-orange-500">100% AMAN REKBER</span></h1>
+  <p class="mt-4 text-white/60 max-w-xl mx-auto">Gak ada lagi cerita kena tipu. Admin jadi penengah. Uang aman, akun aman. Sudah 1.200+ akun terjual.</p>
+  <div class="mt-6 flex justify-center gap-3 text-xs">
+    <span class="bg-white/10 px-3 py-1 rounded-full">✅ Full Data Aman</span>
+    <span class="bg-white/10 px-3 py-1 rounded-full">✅ Refund Jika Bermasalah</span>
+    <span class="bg-white/10 px-3 py-1 rounded-full">✅ Proses 5 Menit</span>
+  </div>
+</section>
+
+<!-- FILTER -->
+<section id="list" class="px-4 md:px-10 py-6">
+  <div class="flex flex-col md:flex-row gap-3 mb-6">
+    <input id="search" placeholder="Cari: SG2 OPM, Cobra, Season 1..." class="flex-1 bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-sm outline-none focus:border-orange-500">
+    <select id="rankFilter" class="bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-sm">
+      <option value="">Semua Rank</option><option>Heroic</option><option>Grandmaster</option><option>Master</option>
+    </select>
+    <select id="priceFilter" class="bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-sm">
+      <option value="">Semua Harga</option><option value="murah">< 500K</option><option value="sedang">500K - 1JT</option><option value="sultan">> 1JT</option>
+    </select>
+  </div>
+  <div id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+</section>
+
+<!-- CARA KERJA -->
+<section class="px-4 md:px-10 py-12 bg-white/5 mt-8 border-y border-white/10">
+  <h2 class="text-2xl font-bold text-center mb-8">Cara JB Aman di Sini</h2>
+  <div class="grid md:grid-cols-3 gap-6 text-center">
+    <div class="bg-black p-6 rounded-2xl border border-white/10"><div class="text-3xl mb-3">1️⃣</div><h3 class="font-bold">Pilih Akun</h3><p class="text-sm text-white/60 mt-2">Klik Beli, chat Admin WA. Jangan TF ke selain nomor resmi.</p></div>
+    <div class="bg-black p-6 rounded-2xl border border-orange-500/30"><div class="text-3xl mb-3">2️⃣</div><h3 class="font-bold text-orange-500">Rekber Admin</h3><p class="text-sm text-white/60 mt-2">Buyer TF ke Admin. Admin cek & amankan akun. Baru diteruskan ke Seller.</p></div>
+    <div class="bg-black p-6 rounded-2xl border border-white/10"><div class="text-3xl mb-3">3️⃣</div><h3 class="font-bold">Akun Diterima</h3><p class="text-sm text-white/60 mt-2">Login, cek, ganti email & pw. Transaksi selesai. Garansi 3 hari.</p></div>
+  </div>
+</section>
+
+<!-- JUAL AKUN -->
+<section id="jual" class="px-4 md:px-10 py-12">
+  <h2 class="text-2xl font-bold mb-4">Mau Jual Akun? Titip Sini</h2>
+  <div class="bg-white/5 p-6 rounded-2xl border border-white/10 max-w-2xl">
+    <input id="jLevel" placeholder="Level Akun (ex: 75)" class="w-full mb-3 bg-black border border-white/10 rounded-xl px-4 py-3 text-sm">
+    <input id="jHarga" placeholder="Harga Jual (ex: 800000)" type="number" class="w-full mb-3 bg-black border border-white/10 rounded-xl px-4 py-3 text-sm">
+    <textarea id="jDesc" placeholder="Deskripsi Vault: SG2 OPM max, MP40 Cobra, Bundle Season..." class="w-full mb-3 bg-black border border-white/10 rounded-xl px-4 py-3 text-sm h-24"></textarea>
+    <button onclick="jualWA()" class="w-full bg-orange-500 text-black font-bold py-3 rounded-xl">Kirim ke Admin WA</button>
+  </div>
+</section>
+
+<footer class="px-6 py-8 text-center text-xs text-white/40 border-t border-white/10">
+  FFJB STORE © 2026 - Platform Jual Beli Akun FF. Jual beli akun melanggar ToS Garena, risiko banned ditanggung pembeli. Kami hanya menyediakan sistem rekber aman.<br>WA Resmi: 0812-XXXX-XXXX
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="fixed inset-0 bg-black/80 hidden z-[99] p-4 flex items-center justify-center">
+  <div id="modalBox" class="bg-[#151515] border border-white/10 rounded-2xl max-w-md w-full p-6"></div>
+</div>
+
+<script>
+const WA_ADMIN = "6285691430849"; // GANTI NOMOR LO DISINI
+
+const akunList = [
+  {id:1, level:78, vault: 420, like: 21000, rank:"Grandmaster", harga:1250000, desc:"Vault 420+ SG2 OPM MAX, MP40 Cobra Rage, Bundle S1-S10 Lengkap, Evo Gun 7 Max", img:"https://i.ibb.co/0jZ3XQ3/ff1.jpg", status:"SOLD? NO"},
+  {id:2, level:71, vault: 280, like: 14500, rank:"Heroic", harga:650000, desc:"SG2 Incubator, MP40 Poker, Bundle Cobra, Emote Langka", img:"https://i.ibb.co/0jZ3XQ3/ff1.jpg", status:"Ready"},
+  {id:3, level:69, vault: 195, like: 9800, rank:"Master", harga:350000, desc:"Akun sultan budget pelajar, vault 195, SG Ungu, MP40 Kuning", img:"https://i.ibb.co/0jZ3XQ3/ff1.jpg", status:"Ready"},
+  {id:4, level:80, vault: 560, like: 32000, rank:"Grandmaster", harga:2500000, desc:"AKUN SULTAN SUPER, All Evo Max, Season 1 Veteran, Title Semua Ada", img:"https://i.ibb.co/0jZ3XQ3/ff1.jpg", status:"Ready"},
+];
+
+const grid = document.getElementById('grid');
+function render(data){
+  grid.innerHTML = data.map(a => `
+    <div class="bg-[#151515] rounded-2xl border border-white/10 overflow-hidden hover:border-orange-500/50 transition">
+      <div class="h-36 bg-gradient-to-br from-orange-500/20 to-black flex items-center justify-center text-5xl">🔥</div>
+      <div class="p-4">
+        <div class="flex justify-between text-[10px] text-white/50"><span>LVL ${a.level} | ${a.rank}</span><span class="text-green-400">● ${a.status}</span></div>
+        <h3 class="font-bold text-sm mt-1 line-clamp-2">${a.desc}</h3>
+        <div class="flex justify-between items-center mt-3">
+          <span class="font-black text-orange-500">Rp ${a.harga.toLocaleString('id-ID')}</span>
+          <button onclick="openModal(${a.id})" class="bg-white text-black text-xs font-bold px-3 py-1.5 rounded-full">Detail</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+render(akunList);
+
+function openModal(id){
+  const a = akunList.find(x=>x.id===id);
+  document.getElementById('modalBox').innerHTML = `
+    <h3 class="font-bold text-lg">Akun LVL ${a.level} - ${a.rank}</h3>
+    <p class="text-sm text-white/60 mt-2">${a.desc}</p>
+    <div class="mt-4 grid grid-cols-2 text-xs gap-2"><div class="bg-white/5 p-2 rounded">Vault: ${a.vault}</div><div class="bg-white/5 p-2 rounded">Like: ${a.like}</div></div>
+    <p class="mt-4 font-black text-xl text-orange-500">Rp ${a.harga.toLocaleString('id-ID')}</p>
+    <button onclick="beliWA(${a.id})" class="w-full mt-4 bg-orange-500 text-black font-bold py-3 rounded-xl">Beli via WA Rekber</button>
+    <button onclick="closeModal()" class="w-full mt-2 bg-white/10 py-2 rounded-xl text-sm">Tutup</button>
+  `;
+  document.getElementById('modal').classList.remove('hidden');
+}
+function closeModal(){document.getElementById('modal').classList.add('hidden');}
+function beliWA(id){
+  const a = akunList.find(x=>x.id===id);
+  const text = `Halo Admin FFJB, mau beli akun ID ${a.id} LVL ${a.level} harga Rp ${a.harga} - ${a.desc}`;
+  window.open(`https://wa.me/${WA_ADMIN}?text=${encodeURIComponent(text)}`, '_blank');
+}
+function jualWA(){
+  const lvl = document.getElementById('jLevel').value;
+  const harga = document.getElementById('jHarga').value;
+  const desc = document.getElementById('jDesc').value;
+  const text = `Halo Admin, mau titip jual akun%0ALevel: ${lvl}%0AHarga: ${harga}%0ADeskripsi: ${desc}`;
+  window.open(`https://wa.me/${WA_ADMIN}?text=${text}`, '_blank');
+}
+
+// filter
+document.getElementById('search').addEventListener('input', e=>{
+  const q = e.target.value.toLowerCase();
+  render(akunList.filter(a=>a.desc.toLowerCase().includes(q)));
+});
+document.getElementById('modal').addEventListener('click', e=>{ if(e.target.id==='modal') closeModal() });
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JB FF STORE - Jual Beli Akun FF Aman</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+<nav class="p-4 flex justify-between items-center border-b border-zinc-800">
+  <h1 class="font-black text-xl">FF<span class="text-yellow-400">STORE</span>.ID</h1>
+  <a href="https://wa.me/6285691430849" class="bg-yellow-400 text-black px-4 py-2 rounded-full font-bold text-sm">Admin WA</a>
+</nav>
+
+<div class="p-4">
+  <div class="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-5 text-black">
+    <h2 class="font-black text-2xl">AKUN SULTAN READY!</h2>
+    <p class="text-sm">Rekber On • Anti HB • Full Refund</p>
+  </div>
+
+  <div class="flex gap-2 mt-4">
+    <button onclick="filterAkun('all')" class="filter-btn bg-zinc-800 px-3 py-1 rounded-full text-sm">Semua</button>
+    <button onclick="filterAkun('sultan')" class="filter-btn bg-zinc-800 px-3 py-1 rounded-full text-sm">Sultan</button>
+    <button onclick="filterAkun('polosan')" class="filter-btn bg-zinc-800 px-3 py-1 rounded-full text-sm">Polosan</button>
+  </div>
+
+  <div id="list-akun" class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4"></div>
+</div>
+
+<script>
+const dataAkun = [
+  {id:1, judul:"AKUN SULTAN VAULT 500+", level:78, harga:1200000, kategori:"sultan", img:"https://i.imgur.com/8Km9tLL.jpeg", spek:"SG2 OPM, MP40 Cobra, Vault 542"},
+  {id:2, judul:"AKUN POLOSAN CN", level:35, harga:85000, kategori:"polosan", img:"https://i.imgur.com/8Km9tLL.jpeg", spek:"CN ON, Level 35, Polosan FF"},
+  {id:3, judul:"AKUN LOG FB VAULT 300", level:65, harga:450000, kategori:"sultan", img:"https://i.imgur.com/8Km9tLL.jpeg", spek:"Vault 320, Evo 5 Max"},
+];
+
+function render(filter='all'){
+  const list = document.getElementById('list-akun');
+  list.innerHTML = '';
+  dataAkun.filter(a => filter=='all' || a.kategori==filter).forEach(akun => {
+    list.innerHTML += `
+    <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800">
+      <img src="${akun.img}" class="h-32 w-full object-cover">
+      <div class="p-3">
+        <h3 class="font-bold text-sm">${akun.judul}</h3>
+        <p class="text-[11px] text-zinc-400 mt-1">${akun.spek}</p>
+        <p class="text-yellow-400 font-black mt-2">Rp ${akun.harga.toLocaleString('id-ID')}</p>
+        <a href="https://wa.me/6285691430849?text=Bang%20mau%20beli%20${akun.judul}" class="block text-center bg-white text-black font-bold text-xs py-2 rounded-lg mt-2">Beli via WA</a>
+      </div>
+    </div>`;
+  });
+}
+function filterAkun(k){ render(k); }
+render();
+</script>
+</body>
+</html>
+<div class="bg-yellow-400 text-black text-xs font-bold py-2 overflow-hidden">
+  <div class="animate-[marquee_20s_linear_infinite] whitespace-nowrap">
+    🔥 FLASH SALE 70% MALAM INI JAM 00.00 SELESAI • REKBER ON 24 JAM • GARANSI ANTI HB 3 HARI • 1.200+ AKUN TERJUAL • 🔥
+  </div>
+</div>
+<style>@keyframes marquee{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}</style>
+<div id="adsPopup" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center p-4 flex">
+  <div class="bg-[#151515] border-2 border-orange-500 rounded-2xl max-w-sm w-full p-6 text-center relative">
+    <button onclick="document.getElementById('adsPopup').classList.add('hidden')" class="absolute -top-3 -right-3 bg-white text-black w-8 h-8 rounded-full font-bold">X</button>
+    <h2 class="text-2xl font-black text-orange-500">DISKON 70%!</h2>
+    <p class="text-sm mt-2">Khusus 10 pembeli pertama hari ini<br><span class="text-white/60">Akun Sultan Vault 500+ cuma</span></p>
+    <p class="text-3xl font-black mt-2">Rp 399K <span class="line-through text-sm text-white/40">1.2JT</span></p>
+    <div id="countdown" class="bg-white/10 rounded-lg py-2 mt-3 text-yellow-400 font-bold">Berakhir dalam 15:00</div>
+    <a id="waPromo" href="#" class="block w-full bg-orange-500 text-black font-bold py-3 rounded-xl mt-4">AMBIL PROMO WA</a>
+  </div>
+</div>
+
+<script>
+// Pop-up muncul otomatis
+setTimeout(()=>{ document.getElementById('adsPopup').classList.remove('hidden'); document.getElementById('adsPopup').classList.add('flex'); }, 2000);
+// Countdown 15 menit
+let time=900; setInterval(()=>{time--; let m=Math.floor(time/60), s=time%60; document.getElementById('countdown').innerText=`Berakhir dalam ${m}:${s<10?'0':''}${s}`; if(time<=0) time=900; },1000);
+document.getElementById('waPromo').href=`https://wa.me/6281234567890?text=Min%20mau%20ambil%20promo%20diskon%2070%25`;
+                               </script>
+                               function render(data){
+  grid.innerHTML = data.map((a,i) => {
+    let iklan = '';
+    if((i+1)%3==0){
+      iklan = `<div class="col-span-2 bg-gradient-to-br from-orange-500 to-yellow-400 rounded-2xl p-4 text-black flex flex-col justify-center">
+        <h3 class="font-black">GIVEAWAY AKUN!</h3><p class="text-xs">Follow IG @ffjbstore & komen ID lu</p>
+        <a href="https://wa.me/6285691430849?text=Ikut giveaway" class="mt-2 bg-black text-white text-xs font-bold px-3 py-1 rounded-full w-fit">IKUT GRATIS</a>
+      </div>`;
+    }
+    return `
+    <div class="bg-[#151515] rounded-2xl border border-white/10 overflow-hidden">
+      <div class="h-36 bg-zinc-800 flex items-center justify-center">🔥</div>
+      <div class="p-3"><h3 class="font-bold text-xs">${a.desc}</h3>
+      <p class="font-black text-orange-500 mt-2">Rp ${a.harga.toLocaleString('id-ID')}</p>
+      <button onclick="openModal(${a.id})" class="w-full mt-2 bg-white text-black text-xs font-bold py-2 rounded-lg">Beli</button>
+      </div>
+    </div>` + iklan;
+  }).join('');
+}
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-orange-500/30 p-3 flex justify-between items-center z-50 md:hidden">
+  <div><p class="text-xs font-bold">🔥 3 Orang lagi liat akun ini</p><p class="text-[10px] text-white/50">Amankan sebelum keduluan</p></div>
+  <a href="https://wa.me/6285691430849" class="bg-orange-500 text-black font-black text-xs px-5 py-2.5 rounded-full">CHAT ADMIN</a>
+</div>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FF STORE.ID - JB & Rental Akun Free Fire</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-[#0f0f0f] text-white">
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-zinc-800">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-xl font-black"><span class="text-yellow-400">FF</span> STORE.ID <span class="text-xs font-normal bg-yellow-400 text-black px-2 py-0.5 rounded ml-2">RENTAL READY</span></h1>
+    <div class="flex gap-2">
+      <button onclick="openAdmin()" class="bg-zinc-800 px-4 py-2 rounded text-sm">Admin</button>
+      <a id="waHeader" href="#" class="bg-green-500 px-4 py-2 rounded text-sm font-bold"><i class="fab fa-whatsapp"></i> CS</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-4">
+  <div class="md:col-span-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-2xl p-6">
+    <h2 class="text-3xl font-black">JB AKUN FF TERMURAH & TERPERCAYA</h2>
+    <p class="mt-2">Mulai 20K - Bisa Rental 2 Jam - Full Vault - SG2 OPM - Rekber On</p>
+  </div>
+  <div class="bg-zinc-900 rounded-2xl p-6 border border-zinc-800">
+    <p class="text-sm text-zinc-400">Filter Cepat</p>
+    <div class="flex gap-2 mt-3">
+      <select id="filterRank" onchange="render()" class="bg-zinc-800 p-2 rounded w-full text-sm"><option value="">Semua Rank</option><option>Grandmaster</option><option>Heroic</option><option>Master</option></select>
+      <select id="filterStatus" onchange="render()" class="bg-zinc-800 p-2 rounded w-full text-sm"><option value="">Semua</option><option value="ready">Ready</option><option value="disewa">Disewa</option></select>
+    </div>
+  </div>
+</section>
+
+<!-- LIST AKUN -->
+<main class="max-w-7xl mx-auto px-4 pb-20">
+  <div id="listAkun" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+</main>
+
+<!-- MODAL DETAIL & RENTAL -->
+<div id="modal" class="fixed inset-0 bg-black/80 hidden z-[60] p-4 overflow-auto">
+  <div class="max-w-lg mx-auto bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 mt-10">
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminPanel" class="fixed inset-0 bg-black z-[70] hidden p-4 overflow-auto">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex justify-between items-center mb-6"><h2 class="text-2xl font-bold">Admin Panel</h2><button onclick="closeAdmin()" class="bg-zinc-800 px-4 py-2 rounded">Tutup</button></div>
+    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+      <h3 class="font-bold mb-3">Tambah Akun Baru</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <input id="a_nama" placeholder="Nama Akun: SG2 OPM" class="bg-zinc-800 p-2 rounded">
+        <input id="a_rank" placeholder="Rank: Grandmaster" class="bg-zinc-800 p-2 rounded">
+        <input id="a_level" placeholder="Level: 70" class="bg-zinc-800 p-2 rounded">
+        <input id="a_hargaJual" type="number" placeholder="Harga Jual: 250000" class="bg-zinc-800 p-2 rounded">
+        <input id="a_hargaRental" type="number" placeholder="Harga Rental / Hari: 35000" class="bg-zinc-800 p-2 rounded">
+        <input id="a_foto" placeholder="Link Foto" class="bg-zinc-800 p-2 rounded">
+        <input id="a_vault" placeholder="Vault: 300+" class="bg-zinc-800 p-2 rounded col-span-2">
+      </div>
+      <button onclick="tambahAkun()" class="mt-3 w-full bg-yellow-400 text-black font-bold py-2 rounded">Tambah Akun</button>
+    </div>
+    <div id="adminList" class="mt-6 grid gap-2"></div>
+  </div>
+</div>
+
+<script>
+let WA_NUMBER = "6285691430849"; // GANTI NOMOR WA LU
+let akun = JSON.parse(localStorage.getItem('ff_akun')) || [
+  {id:1, nama:"SG2 OPM - Vault 400", rank:"Grandmaster", level:72, vault:"420", hargaJual:350000, hargaRental:35000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"SG Ungu, MP40 Cobra, Bundle Full Old"},
+  {id:2, nama:"Akun Sultan L 65", rank:"Heroic", level:65, vault:"280", hargaJual:180000, hargaRental:20000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"Akun semi sultan, cocok buat rental"},
+  {id:3, nama:"Akun Pemula 50", rank:"Master", level:55, vault:"150", hargaJual:75000, hargaRental:10000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"disewa", sewaSampai: Date.now()+ 2*60*60*1000, desc:"Disewa sampai 2 jam lagi"},
+];
+
+function save(){ localStorage.setItem('ff_akun', JSON.stringify(akun)); }
+function render(){
+  let rank = document.getElementById('filterRank').value;
+  let st = document.getElementById('filterStatus').value;
+  let html = "";
+  akun.filter(a => (!rank || a.rank==rank) && (!st || a.status==st)).forEach(a=>{
+    let sisa = a.sewaSampai ? Math.max(0, Math.floor((a.sewaSampai - Date.now())/1000)) : 0;
+    html += `<div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+      <img src="${a.foto}" class="h-36 w-full object-cover">
+      <div class="p-3">
+        <span class="text-[10px] px-2 py-1 rounded ${a.status=='ready'?'bg-green-500/20 text-green-400':'bg-red-500/20 text-red-400'}">${a.status.toUpperCase()} ${sisa? '('+Math.floor(sisa/60)+'m)':''}</span>
+        <h3 class="font-bold text-sm mt-2 leading-tight">${a.nama}</h3>
+        <p class="text-xs text-zinc-400">${a.rank} • Lv ${a.level} • Vault ${a.vault}</p>
+        <div class="mt-3 grid grid-cols-2 gap-2">
+          <div><p class="text-[10px] text-zinc-500">JUAL</p><p class="font-bold text-yellow-400">Rp${a.hargaJual.toLocaleString()}</p></div>
+          <div><p class="text-[10px] text-zinc-500">RENTAL/HARI</p><p class="font-bold">Rp${a.hargaRental.toLocaleString()}</p></div>
+        </div>
+        <div class="flex gap-2 mt-3">
+          <button onclick="detail(${a.id})" class="flex-1 bg-zinc-800 py-2 rounded text-xs font-bold">DETAIL</button>
+          <button onclick="rental(${a.id})" class="flex-1 bg-yellow-400 text-black py-2 rounded text-xs font-bold" ${a.status!='ready'?'disabled':''}>RENTAL</button>
+        </div>
+      </div>
+    </div>`;
+  });
+  document.getElementById('listAkun').innerHTML = html;
+  document.getElementById('waHeader').href = `https://wa.me/${WA_NUMBER}`;
+  adminRender();
+}
+function detail(id){
+  let a = akun.find(x=>x.id==id);
+  document.getElementById('modalContent').innerHTML = `
+    <img src="${a.foto}" class="w-full h-64 object-cover">
+    <div class="p-5">
+      <h2 class="text-xl font-black">${a.nama}</h2>
+      <p class="text-sm text-zinc-400 mt-1">${a.desc}</p>
+      <div class="mt-4 bg-zinc-800 p-3 rounded-xl text-sm">
+        Rank: ${a.rank} | Level: ${a.level} | Vault: ${a.vault}<br>
+        Harga Jual: <b class="text-yellow-400">Rp${a.hargaJual.toLocaleString()}</b><br>
+        Rental: 2 Jam Rp${(a.hargaRental*0.2).toFixed(0)*1000} | 6 Jam Rp${(a.hargaRental*0.4).toFixed(0)*1000} | 1 Hari Rp${a.hargaRental.toLocaleString()}
+      </div>
+      <a href="https://wa.me/${WA_NUMBER}?text=Halo%20min%20mau%20BELI%20akun%20${encodeURIComponent(a.nama)}%20ID%20${a.id}" target="_blank" class="block mt-4 bg-green-500 text-center py-3 rounded-xl font-bold">BELI VIA WA</a>
+      <button onclick="closeModal()" class="w-full mt-2 bg-zinc-800 py-2 rounded">Tutup</button>
+    </div>`;
+  document.getElementById('modal').classList.remove('hidden');
+}
+function rental(id){
+  let a = akun.find(x=>x.id==id);
+  document.getElementById('modalContent').innerHTML = `
+    <div class="p-5">
+      <h2 class="text-xl font-black">Rental ${a.nama}</h2>
+      <p class="text-sm text-zinc-400">Pilih durasi rental</p>
+      <div class="grid gap-2 mt-4">
+        <button onclick="doRental(${id},2,${a.hargaRental*0.2})" class="bg-zinc-800 p-3 rounded flex justify-between"><span>2 Jam</span><b>Rp${Math.round(a.hargaRental*0.2).toLocaleString()}</b></button>
+        <button onclick="doRental(${id},6,${a.hargaRental*0.4})" class="bg-zinc-800 p-3 rounded flex justify-between"><span>6 Jam</span><b>Rp${Math.round(a.hargaRental*0.4).toLocaleString()}</b></button>
+        <button onclick="doRental(${id},12,${a.hargaRental*0.6})" class="bg-zinc-800 p-3 rounded flex justify-between"><span>12 Jam</span><b>Rp${Math.round(a.hargaRental*0.6).toLocaleString()}</b></button>
+        <button onclick="doRental(${id},24,${a.hargaRental})" class="bg-yellow-400 text-black p-3 rounded flex justify-between font-bold"><span>24 Jam (Paling Laku)</span><b>Rp${a.hargaRental.toLocaleString()}</b></button>
+      </div>
+      <button onclick="closeModal()" class="w-full mt-3 bg-zinc-800 py-2 rounded">Batal</button>
+    </div>`;
+  document.getElementById('modal').classList.remove('hidden');
+}
+function doRental(id,jam,harga){
+  if(confirm(`Rental ${jam} Jam seharga Rp${harga.toLocaleString()} ?`)){
+    let a = akun.find(x=>x.id==id);
+    a.status = "disewa";
+    a.sewaSampai = Date.now() + jam*60*60*1000;
+    save(); render(); closeModal();
+    window.open(`https://wa.me/${WA_NUMBER}?text=Halo%20min%20mau%20RENTAL%20${jam}Jam%20akun%20${encodeURIComponent(a.nama)}%20ID%20${a.id}%20Harga%20Rp${harga}`,'_blank');
+  }
+}
+function closeModal(){ document.getElementById('modal').classList.add('hidden'); }
+function openAdmin(){
+  let p = prompt("Password Admin:");
+  if(p==="admin123"){ document.getElementById('adminPanel').classList.remove('hidden'); }
+}
+function closeAdmin(){ document.getElementById('adminPanel').classList.add('hidden'); }
+function tambahAkun(){
+  let n = {
+    id: Date.now(),
+    nama: document.getElementById('a_nama').value,
+    rank: document.getElementById('a_rank').value,
+    level: document.getElementById('a_level').value,
+    vault: document.getElementById('a_vault').value,
+    hargaJual: parseInt(document.getElementById('a_hargaJual').value),
+    hargaRental: parseInt(document.getElementById('a_hargaRental').value),
+    foto: document.getElementById('a_foto').value || "https://i.imgur.com/8Km9tLL.jpeg",
+    status: "ready", sewaSampai:null, desc:"Akun FF"
+  };
+  akun.unshift(n); save(); render();
+}
+function adminRender(){
+  document.getElementById('adminList').innerHTML = akun.map(a=>`
+    <div class="bg-zinc-900 p-3 rounded flex justify-between items-center border border-zinc-800">
+      <span class="text-sm">${a.nama} - ${a.status}</span>
+      <div class="flex gap-2">
+        <button onclick="akun.find(x=>x.id==${a.id}).status='ready'; akun.find(x=>x.id==${a.id}).sewaSampai=null; save(); render();" class="bg-green-600 px-2 py-1 rounded text-xs">Ready</button>
+        <button onclick="akun=akun.filter(x=>x.id!=${a.id}); save(); render();" class="bg-red-600 px-2 py-1 rounded text-xs">Hapus</button>
+      </div>
+    </div>`).join('');
+}
+// auto cek sewa expired tiap 10 detik
+setInterval(()=>{ let ch=false; akun.forEach(a=>{ if(a.status=='disewa' && a.sewaSampai < Date.now()){ a.status='ready'; a.sewaSampai=null; ch=true; } }); if(ch){ save(); render(); } }, 10000);
+render();
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FF STORE.ID - JB & Rental</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-[#0f0f0f] text-white">
+
+<header class="sticky top-0 z-50 bg-black/90 backdrop-blur border-b border-zinc-800">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-xl font-black"><span class="text-yellow-400">FF</span> STORE.ID</h1>
+    <div class="flex gap-2">
+      <button type="button" onclick="openAdmin()" class="bg-zinc-800 px-4 py-2 rounded text-sm cursor-pointer">Admin</button>
+      <a id="waHeader" href="#" class="bg-green-500 px-4 py-2 rounded text-sm font-bold">WA</a>
+    </div>
+  </div>
+</header>
+
+<section class="max-w-7xl mx-auto px-4 py-6 grid md:grid-cols-3 gap-4">
+  <div class="md:col-span-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-2xl p-6">
+    <h2 class="text-2xl font-black">JB & RENTAL AKUN FF</h2>
+    <p class="text-sm mt-1">Rental 2 Jam Mulai 5K - Garansi Akun Aman</p>
+  </div>
+  <div class="bg-zinc-900 rounded-2xl p-4 border border-zinc-800">
+    <select id="filterRank" class="bg-zinc-800 p-2 rounded w-full text-sm mb-2"><option value="">Semua Rank</option><option>Grandmaster</option><option>Heroic</option><option>Master</option></select>
+    <select id="filterStatus" class="bg-zinc-800 p-2 rounded w-full text-sm"><option value="">Semua Status</option><option value="ready">Ready</option><option value="disewa">Disewa</option></select>
+  </div>
+</section>
+
+<main class="max-w-7xl mx-auto px-4 pb-20">
+  <div id="listAkun" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+</main>
+
+<!-- MODAL -->
+<div id="modal" class="fixed inset-0 bg-black/80 hidden z-[60] p-4">
+  <div class="max-w-lg mx-auto bg-zinc-900 rounded-2xl border border-zinc-700 mt-10 overflow-hidden">
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div id="adminPanel" class="fixed inset-0 bg-black z-[70] hidden p-4 overflow-auto">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex justify-between mb-6"><h2 class="text-2xl font-bold">Admin</h2><button type="button" onclick="closeAdmin()" class="bg-zinc-800 px-4 py-2 rounded">Tutup</button></div>
+    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800 grid grid-cols-2 gap-2">
+      <input id="a_nama" placeholder="Nama Akun" class="bg-zinc-800 p-2 rounded col-span-2">
+      <input id="a_rank" placeholder="Rank" class="bg-zinc-800 p-2 rounded">
+      <input id="a_level" placeholder="Level" class="bg-zinc-800 p-2 rounded">
+      <input id
+        let akun = [
+  {id:1, nama:"SG2 OPM Ungu - Vault 512", rank:"Grandmaster", level:78, vault:"512", hargaJual:650000, hargaRental:40000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"SG2 OPM, MP40 Cobra Lv5, Bundle Old"},
+  {id:2, nama:"MP40 Cobra + M1887 OPM", rank:"Grandmaster", level:74, vault:"450", hargaJual:450000, hargaRental:35000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"Vault 450+, Emote Full"},
+  {id:3, nama:"Akun Sultan 400 Vault", rank:"Heroic", level:70, vault:"400", hargaJual:350000, hargaRental:30000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"Bundle Langka Banyak"},
+  {id:4, nama:"Vault 350 - SG2 OPM", rank:"Heroic", level:68, vault:"350", hargaJual:280000, hargaRental:25000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"Cocok buat rental"},
+  {id:5, nama:"Vault 300 - Full Senjata", rank:"Heroic", level:65, vault:"300", hargaJual:200000, hargaRental:20000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"AK Dragon, MP5 OPM"},
+  {id:6, nama:"Vault 250 - Semi Sultan", rank:"Master", level:62, vault:"250", hargaJual:150000, hargaRental:15000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"Murah buat rental harian"},
+  {id:7, nama:"Vault 200 - Old Player", rank:"Master", level:60, vault:"200", hargaJual:120000, hargaRental:12000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"Bundle Old Return"},
+  {id:8, nama:"Vault 180 - Pemula Sultan", rank:"Diamond", level:58, vault:"180", hargaJual:90000, hargaRental:10000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"Murah meriah"},
+  {id:9, nama:"Akun 150 Vault - Murah", rank:"Diamond", level:55, vault:"150", hargaJual:70000, hargaRental:8000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"Buat push rank"},
+  {id:10, nama:"Akun 100 Vault - Starter", rank:"Platinum", level:50, vault:"100", hargaJual:50000, hargaRental:5000, foto:"https://i.imgur.com/8Km9tLL.jpeg", status:"ready", sewaSampai:null, desc:"Akun tumbal / rental 2 jam"},
+];
+      window.rentalAkun = function(id){
+  let a = akun.find(x=>x.id==id);
+  if(a.status !== 'ready'){ alert('Akun sedang disewa'); return; }
+  document.getElementById('modalContent').innerHTML = `
+    <div class="p-5">
+      <h2 class="font-bold text-lg">Rental ${a.nama}</h2>
+      <p class="text-xs text-zinc-400">Stok Rental: 10 Akun Ready</p>
+      <div class="grid gap-2 mt-4">
+        <button type="button" onclick="doRental(${a.id},2,7000)" class="bg-zinc-800 p-3 rounded flex justify-between"><span>2 Jam</span><b>Rp 7K</b></button>
+        <button type="button" onclick="doRental(${a.id},6,15000)" class="bg-zinc-800 p-3 rounded flex justify-between"><span>6 Jam</span><b>Rp 15K</b></button>
+        <button type="button" onclick="doRental(${a.id},10,25000)" class="bg-yellow-400 text-black p-3 rounded flex justify-between font-bold"><span>10 JAM BEST SELLER</span><b>Rp 25K</b></button>
+        <button type="button" onclick="doRental(${a.id},24,${a.hargaRental})" class="bg-zinc-800 p-3 rounded flex justify-between"><span>24 Jam / 1 Hari</span><b>Rp ${a.hargaRental.toLocaleString()}</b></button>
+      </div>
+      <button type="button" onclick="closeModal()" class="w-full bg-zinc-800 py-2 rounded mt-3">Batal</button>
+    </div>`;
+  document.getElementById('modal').classList.remove('hidden');
+}<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FF STORE.ID - JB & Rental Akun FF Terpercaya</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-[#0a0a0a] text-white font-sans">
+
+<header class="sticky top-0 z-50 bg-black/90 backdrop-blur border-b border-zinc-800">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="font-black text-xl">FF<span class="text-yellow-400">STORE.ID</span> <span class="text-[10px] bg-yellow-400 text-black px-2 py-1 rounded">JB + RENTAL</span></h1>
+    <div class="flex gap-2">
+      <button onclick="bukaAdmin()" class="bg-zinc-800 px-4 py-2 rounded-lg text-sm"><i class="fa fa-gear"></i> Admin</button>
+      <a id="btnWA" href="#" target="_blank" class="bg-green-500 px-4 py-2 rounded-lg text-sm font-bold"><i class="fab fa-whatsapp"></i> CS</a>
+    </div>
+  </div>
+</header>
+
+<div class="max-w-7xl mx-auto px-4 mt-6 grid md:grid-cols-4 gap-3">
+  <div class="md:col-span-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-6 text-black">
+    <h2 class="text-3xl font-black leading-none">JB AKUN FF TERMURAH</h2>
+    <p class="text-sm mt-2 font-bold">Mulai 5K Rental 2 Jam • Full Vault • Rekber ON • Garansi</p>
+  </div>
+  <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4">
+    <p class="text-xs text-zinc-400">Filter</p>
+    <select id="fRank" class="w-full bg-zinc-800 p-2 rounded-lg text-sm mt-2"><option value="">Semua Rank</option><option>Grandmaster</option><option>Heroic</option><option>Master</option></select>
+    <select id="fStatus" class="w-full bg-zinc-800 p-2 rounded-lg text-sm mt-2"><option value="">Jual & Rental</option><option value="ready">Ready Saja</option><option value="disewa">Sedang Disewa</option></select>
+  </div>
+</div>
+
+<main class="max-w-7xl mx-auto px-4 py-6">
+  <div id="gridAkun" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"></div>
+</main>
+
+<div id="modal" class="fixed inset-0 bg-black/80 hidden z-[100] p-4 flex items-center justify-center">
+  <div class="bg-zinc-900 w-full max-w-md rounded-2xl border border-zinc-700 overflow-hidden max-h-[90vh] overflow-y-auto">
+    <div id="modalIsi"></div>
+  </div>
+</div>
+
+<div id="admin" class="fixed inset-0 bg-black z-[200] hidden p-4 overflow-auto">
+  <div class="max-w-2xl mx-auto">
+    <div class="flex justify-between py-4"><h2 class="font-bold text-xl">Kelola Akun (10 Slot Rental)</h2><button onclick="tutupAdmin()" class="bg-zinc-800 px-4 py-2 rounded">Tutup</button></div>
+    <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800 grid grid-cols-2 gap-2">
+      <input id="inNama" placeholder="Nama: SG2 OPM Vault 400" class="col-span-2 bg-zinc-800 p-3 rounded">
+      <input id="inRank" placeholder="Rank" class="bg-zinc-800 p-3 rounded"><input id="inLevel" placeholder="Level" class="bg-zinc-800 p-3 rounded">
+      <input id="inJual" type="number" placeholder="Harga Jual" class="bg-zinc-800 p-3 rounded"><input id="inRental" type="number" placeholder="Harga Rental / Hari" class="bg-zinc-800 p-3 rounded">
+      <input id="inFoto" placeholder="Link Foto https://" class="col-span-2 bg-zinc-800 p-3 rounded">
+      <button onclick="tambahAkunBaru()" class="col-span-2 bg-yellow-400 text-black font-black py-3 rounded-xl mt-2">TAMBAH AKUN</button>
+    </div>
+    <div id="listAdmin" class="mt-6 space-y-2"></div>
+  </div>
+</div>
+
+<script>
+const WA_NUMBER = "6281234567890"; // GANTI NOMOR LU DISINI
+let dataAkun = JSON.parse(localStorage.getItem('ff_store_v4') || 'null') || [
+  {id:1,nama:"SG2 OPM Ungu Vault 500",rank:"Grandmaster",level:78,vault:500,hargaJual:650000,hargaRental:40000,foto:"https://i.imgur.com/8Km9tLL.jpeg",status:"ready",sewaSampai:0,desc:"SG Ungu, MP40 Cobra Max, Bundle Old Langka"},
+  {id:2,nama:"Akun 400 Vault - Sultan",rank:"Grandmaster",level:74,vault:400,hargaJual:400000,hargaRental:35000,foto:"https://i.imgur.com/8Km9tLL.jpeg",status:"ready",sewaSampai:0,desc:"Full Vault, Emote 100+"},
+  {id:3,nama:"Akun 350 Vault",rank:"Heroic",level:70,vault:350,hargaJual:300000,hargaRental:30000,foto:"https://i.imgur.com/8Km9tLL.jpeg",status:"ready",sewaSampai:0,desc:"Cocok buat rental harian"},
+  {id:4,nama:"Akun 300 Vault",rank:"Heroic",level:68,vault:300,hargaJual:250000,hargaRental:25000,foto:"https://i.imgur.com/8Km9tLL.jpeg",status:"ready",sewaSampai:0,desc:"Bundle banyak"},
+  {id:5,nama:"Akun 250 Vault",rank:"Heroic",level:65,vault:250,hargaJual:180000,hargaRental:20000,foto:"https://i.imgur.com/8Km9tLL.jpeg",status:"ready",sewaSampai:0,desc:"Semi sultan"},
+];
+
+function simpan(){ localStorage.setItem('ff_store_v4', JSON.stringify(dataAkun)); }
+function formatSisa(ms){
+  if(ms<=0) return "";
+  let m = Math.floor(ms/60000); return m>60? Math.floor(m/60)+"j "+(m%60)+"m" : m+" menit";
+}
+
+function tampil(){
+  const fR = document.getElementById('fRank').value;
+  const fS = document.getElementById('fStatus').value;
+  let html="";
+  dataAkun.filter(a=> (!fR||a.rank==fR) && (!fS||a.status==fS)).forEach(a=>{
+    let sisa = a.sewaSampai - Date.now();
+    html+=`<div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700">
+      <div class="relative"><img src="${a.foto}" class="w-full h-32 object-cover"><span class="absolute top-2 left-2 text-[10px] px-2 py-1 rounded-full font-bold ${a.status=='ready'?'bg-green-500 text-black':'bg-red-500 text-white'}">${a.status=='ready'?'READY':'DISEWA '+formatSisa(sisa)}</span></div>
+      <div class="p-3">
+        <h3 class="font-bold text-[13px] leading-tight h-8 overflow-hidden">${a.nama}</h3>
+        <p class="text-[11px] text-zinc-400 mt-1">${a.rank} • Lv ${a.level} • V${a.vault}</p>
+        <div class="flex justify-between mt-3"><div><p class="text-[9px] text-zinc-500">JUAL</p><p class="text-sm font-black text-yellow-400">Rp${a.hargaJual.toLocaleString('id-ID')}</p></div><div class="text-right"><p class="text-[9px] text-zinc-500">RENTAL</p><p class="text-sm font-bold">Rp${a.hargaRental.toLocaleString('id-ID')}/hr</p></div></div>
+        <div class="grid grid-cols-2 gap-2 mt-3">
+          <button onclick="bukaDetail(${a.id})" class="bg-zinc-800 py-2 rounded-lg text-xs font-bold">DETAIL</button>
+          <button onclick="bukaRental(${a.id})" class="bg-yellow-400 text-black py-2 rounded-lg text-xs font-black ${a.status!='ready'?'opacity-30':''}">RENTAL</button>
+        </div>
+      </div>
+    </div>`;
+  });
+  document.getElementById('gridAkun').innerHTML = html;
+  document.getElementById('btnWA').href = `https://wa.me/${WA_NUMBER}`;
+  tampilAdmin();
+}
+
+function bukaDetail(id){
+  let a = dataAkun.find(x=>x.id==id);
+  document.getElementById('modalIsi').innerHTML=`<img src="${a.foto}" class="w-full h-56 object-cover"><div class="p-5"><h2 class="font-black text-lg">${a.nama}</h2><p class="text-sm text-zinc-400 mt-2">${a.desc}</p><div class="bg-zinc-800 p-3 rounded-xl mt-4 text-sm">Rank: ${a.rank}<br>Level: ${a.level}<br>Vault: ${a.vault}<br><br>Harga Jual: <b class="text-yellow-400">Rp${a.hargaJual.toLocaleString()}</b><br>Harga Rental: Rp${a.hargaRental.toLocaleString()}/hari</div><a href="https://wa.me/${WA_NUMBER}?text=Halo%20min%20mau%20BELI%20akun%20${encodeURIComponent(a.nama)}%20ID${a.id}" target="_blank" class="block bg-green-500 text-center py-3 rounded-xl font-black mt-4">BELI LEWAT WA</a><button onclick="tutupModal()" class="w-full bg-zinc-800 py-3 rounded-xl mt-2">Tutup</button></div>`;
+  document.getElementById('modal').classList.remove('hidden');
+}
+function bukaRental(id){
+  let a = dataAkun.find(x=>x.id==id);
+  if(a.status!='ready'){ alert('Akun lagi disewa, sisa '+formatSisa(a.sewaSampai-Date.now())); return; }
+  document.getElementById('modalIsi').innerHTML=`<div class="p-5"><h2 class="font-black">Sewa ${a.nama}</h2><p class="text-xs text-zinc-400 mt-1">Pilih durasi rental</p><div class="space-y-2 mt-4">
+  <button onclick="eksekusiRental(${a.id},2,7000)" class="w-full bg-zinc-800 p-4 rounded-xl flex justify-between text-sm"><span>2 Jam - Buat Mabar</span><b>Rp 7.000</b></button>
+  <button onclick="eksekusiRental(${a.id},6,15000)" class="w-full bg-zinc-800 p-4 rounded-xl flex justify-between text-sm"><span>6 Jam - Push Rank</span><b>Rp 15.000</b></button>
+  <button onclick="eksekusiRental(${a.id},10,25000)" class="w-full bg-yellow-400 text-black p-4 rounded-xl flex justify-between font-black"><span>10 JAM PALING LAKU</span><b>Rp 25.000</b></button>
+  <button onclick="eksekusiRental(${a.id},24,${a.hargaRental})" class="w-full bg-zinc-800 p-4 rounded-xl flex justify-between text-sm"><span>24 Jam / 1 Hari</span><b>Rp ${a.hargaRental.toLocaleString()}</b></button>
+  </div><button onclick="tutupModal()" class="w-full bg-zinc-800 py-3 rounded-xl mt-4">Batal</button></div>`;
+  document.getElementById('modal').classList.remove('hidden');
+}
+function eksekusiRental(id,jam,harga){
+  let a = dataAkun.find(x=>x.id==id);
+  a.status='disewa'; a.sewaSampai = Date.now() + jam*3600000; simpan(); tampil(); tutupModal();
+  window.open(`https://wa.me/${WA_NUMBER}?text=Halo%20min%20mau%20RENTAL%20${jam}JAM%20akun%20${encodeURIComponent(a.nama)}%20ID${id}%20Harga%20Rp${harga}`,'_blank');
+}
+function tutupModal(){ document.getElementById('modal').classList.add('hidden'); }
+function bukaAdmin(){ let p=prompt("Password admin:"); if(p=="admin123") document.getElementById('admin').classList.remove('hidden'); }
+function tutupAdmin(){ document.getElementById('admin').classList.add('hidden'); }
+function tambahAkunBaru(){
+  let o={id:Date.now(),nama:document.getElementById('inNama').value||"Akun FF",rank:document.getElementById('inRank').value||"Heroic",level:parseInt(document.getElementById('inLevel').value)||60,vault:200,hargaJual:parseInt(document.getElementById('inJual').value)||100000,hargaRental:parseInt(document.getElementById('inRental').value)||20000,foto:document.getElementById('inFoto').value||"https://i.imgur.com/8Km9tLL.jpeg",status:"ready",sewaSampai:0,desc:"Akun FF"};
+  dataAkun.unshift(o); simpan(); tampil();
+}
+function tampilAdmin(){ document.getElementById('listAdmin').innerHTML = dataAkun.map(a=>`<div class="bg-zinc-900 border border-zinc-800 p-3 rounded-xl flex justify-between items-center"><span class="text-sm">${a.nama} - ${a.status}</span><div class="flex gap-2"><button onclick="setReadyAkun(${a.id})" class="bg-green-600 px-3 py-1 rounded text-xs">Ready</button><button onclick="hapusAkun(${a.id})" class="bg-red-600 px-3 py-1 rounded text-xs">Hapus</button></div></div>`).join(''); }
+function setReadyAkun(id){ let a=dataAkun.find(x=>x.id==id); a.status='ready'; a.sewaSampai=0; simpan(); tampil(); }
+function hapusAkun(id){ dataAkun=dataAkun.filter(x=>x.id!=id); simpan(); tampil(); }
+
+document.getElementById('fRank').addEventListener('change',tampil);
+document.getElementById('fStatus').addEventListener('change',tampil);
+document.getElementById('modal').addEventListener('click',e=>{ if(e.target.id=='modal') tutupModal(); });
+
+setInterval(()=>{ let ubah=false; dataAkun.forEach(a=>{ if(a.status=='disewa' && a.sewaSampai < Date.now()){ a.status='ready'; a.sewaSampai=0; ubah=true; } }); if(ubah){ simpan(); tampil(); } }, 10000);
+
+tampil();
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>FF STORE PRO - JB & Rental Auto QRIS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+<header class="p-4 flex justify-between border-b border-zinc-800"><h1 class="font-black">FF STORE PRO - QRIS AUTO</h1><div id="authArea"><button onclick="document.getElementById('loginBox').classList.remove('hidden')" class="bg-yellow-400 text-black px-4 py-2 rounded font-bold">Login / Daftar</button></div></header>
+<main class="max-w-7xl mx-auto p-4 grid grid-cols-2 md:grid-cols-4 gap-4" id="grid"></main>
+
+<!-- LOGIN BOX -->
+<div id="loginBox" class="fixed inset-0 bg-black/80 hidden z-50 flex items-center justify-center p-4">
+  <div class="bg-zinc-900 p-6 rounded-2xl w-full max-w-sm border border-zinc-700">
+    <h2 class="font-bold text-lg">Login / Daftar Akun Pembeli</h2>
+    <input id="l_user" placeholder="Username" class="w-full bg-zinc-800 p-3 rounded mt-4">
+    <input id="l_pass" type="password" placeholder="Password" class="w-full bg-zinc-800 p-3 rounded mt-2">
+    <input id="l_wa" placeholder="No WA (buat daftar)" class="w-full bg-zinc-800 p-3 rounded mt-2">
+    <div class="flex gap-2 mt-4"><button onclick="doLogin()" class="flex-1 bg-zinc-700 py-3 rounded">Login</button><button onclick="doRegister()" class="flex-1 bg-yellow-400 text-black py-3 rounded font-bold">Daftar</button></div>
+    <button onclick="document.getElementById('loginBox').classList.add('hidden')" class="w-full mt-3 text-sm text-zinc-400">Tutup</button>
+  </div>
+</div>
+
+<!-- QRIS MODAL -->
+<div id="qrisBox" class="fixed inset-0 bg-black/90 hidden z-[60] flex items-center justify-center p-4">
+  <div class="bg-white text-black p-6 rounded-2xl text-center max-w-sm w-full">
+    <h2 class="font-black text-xl">SCAN QRIS UNTUK BAYAR</h2><p id="qrisInfo" class="text-sm mt-2"></p>
+    <img id="qrisImg" src="" class="mx-auto mt-4 w-64 h-64">
+    <p class="text-xs mt-3 text-zinc-500">Setelah bayar, akun otomatis aktif. Admin akan kirim detail akun via WA.</p>
+    <button onclick="document.getElementById('qrisBox').classList.add('hidden'); location.reload()" class="w-full bg-black text-white py-3 rounded-xl mt-4">Saya Sudah Bayar</button>
+  </div>
+</div>
+
+<script>
+async function loadAkun(){
+  await fetch('api.php?action=check_expired');
+  let res = await fetch('index_data.php'); // file kecil untuk ambil data akun
+  let data = await res.json();
+  document.getElementById('grid').innerHTML = data.map(a=>`
+    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+      <img src="${a.foto}" class="h-32 w-full object-cover"><div class="p-3">
+      <h3 class="font-bold text-sm">${a.nama}</h3><p class="text-xs text-zinc-400">${a.rank} • ${a.status}</p>
+      <p class="font-black text-yellow-400 mt-2">Jual Rp${a.harga_jual.toLocaleString()}</p>
+      <button onclick="rental(${a.id},10,${a.harga_rental_10jam})" class="w-full bg-yellow-400 text-black py-2 rounded-lg font-black mt-2 text-xs">RENTAL 10 JAM Rp${a.harga_rental_10jam.toLocaleString()}</button>
+      <button onclick="rental(${a.id},24,${a.harga_rental_harian})" class="w-full bg-zinc-800 py-2 rounded-lg font-bold mt-2 text-xs">RENTAL 24 JAM</button>
+      </div>
+    </div>`).join('');
+}
+async function rental(id,durasi,harga){
+  let r = await fetch('api.php?action=create_order',{method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:`akun_id=${id}&tipe=rental&durasi=${durasi}&harga=${harga}`});
+  let j = await r.json();
+  if(j.error){ alert(j.error); document.getElementById('loginBox').classList.remove('hidden'); return; }
+  document.getElementById('qrisImg').src=j.qris;
+  document.getElementById('qrisInfo').innerText=`Order #${j.order_id} - ${durasi} Jam - Rp${harga.toLocaleString()}`;
+  document.getElementById('qrisBox').classList.remove('hidden');
+}
+async function doRegister(){ let d=new FormData(); d.append('username',l_user.value); d.append('password',l_pass.value); d.append('wa',l_wa.value); await fetch('api.php?action=register',{method:'POST',body:new URLSearchParams(d)}); alert('Daftar berhasil, silahkan login'); }
+async function doLogin(){ let d=new FormData(); d.append('username',l_user.value); d.append('password',l_pass.value); let r=await fetch('api.php?action=login',{method:'POST',body:new URLSearchParams(d)}); let j=await r.json(); if(j.ok){ location.reload(); } else alert('Login gagal'); }
+
+loadAkun();
+</script>
+</body>
+</html>
+🔥 FF STORE.ID - JB & RENTAL AKUN FF TERMURAH 🔥
+
+BOKIS TAPI PENGEN KELIATAN SULTAN? RENTAL AJA!
+
+✅ 10 JAM CUMA 25K - LANGSUNG GAS MABAR
+✅ 10 AKUN READY SETIAP HARI - VAULT 100-500
+✅ SG2 OPM, MP40 COBRA, BUNDLE OLD LENGKAP
+✅ REKBER ON - GARANSI - PROSES 2 MENIT
+
+UPDATE STOK & PROMO DISKON 50% CUMAN DI SALURAN WA!
+
+👇 JOIN SEKARANG, GRATIS:
+https://whatsapp.com/channel/0029VbCYsuIFCCoUi0L4gr0N
+
+Slot terbatas, yang join duluan dapet harga promo!
+      <script>
+// ===== SETTING DISKON & PEMBAYARAN - GANTI DISINI =====
+const KODE_DISKON = {
+  "WAJOIN50": { potongan: 50, tipe: "%", desc: "Diskon 50% khusus member saluran WA" },
+  "MEMBER10": { potongan: 10, tipe: "%", desc: "Diskon 10% member" },
+  "RENTAL10K": { potongan: 10000, tipe: "rp", desc: "Potongan Rp10.000" },
+  "PROMO17": { potongan: 17, tipe: "%", desc: "Promo 17 Agustus" }
+};
+
+const METODE_BAYAR = [
+  {id:"dana", nama:"DANA", norek:"085771885380 a/n FF STORE", icon:"💳"},
+  {id:"ovo", nama:"OVO", norek:"085691430849 a/n FF STORE", icon:"💜"},
+  {id:"gopay", nama:"GoPay", norek:085691430849 a/n FF STORE", icon:"💚"},
+  {id:"qris", nama:"QRIS All Payment", norek:"Scan QR di bawah", icon:"📱"},
+  {id:"bca", nama:"BCA Transfer", norek:"1234567890 a/n FF STORE", icon:"🏦"}
+];
+
+const WA_NUMBER = "6285691430849";
+let orders = JSON.parse(localStorage.getItem('ff_orders') || '[]');
+
+function hitungDiskon(hargaAwal, kode){
+  if(!KODE_DISKON[kode.toUpperCase()]) return {hargaAkhir: hargaAwal, diskon:0, valid:false};
+  let d = KODE_DISKON[kode.toUpperCase()];
+  let potongan = d.tipe == "%" ? hargaAwal * d.potongan / 100 : d.potongan;
+  return {hargaAkhir: Math.max(0, hargaAwal - potongan), diskon: potongan, valid:true, info:d.desc};
+}
+
+window.bukaRental = function(id){
+  let a = dataAkun.find(x=>x.id==id);
+  if(a.status!='ready'){ alert('Akun lagi disewa'); return; }
+  let opsiBayar = METODE_BAYAR.map(m=>`<option value="${m.id}">${m.icon} ${m.nama}</option>`).join('');
+  
+  document.getElementById('modalIsi').innerHTML = `
+    <div class="p-5">
+      <h2 class="font-black text-lg">Sewa ${a.nama}</h2>
+      <div class="mt-4 space-y-2">
+        <label class="text-xs text-zinc-400">Durasi Rental</label>
+        <select id="durasiSelect" class="w-full bg-zinc-800 p-3 rounded-xl">
+          <option value="2-7000">2 Jam - Rp7.000</option>
+          <option value="6-15000">6 Jam - Rp15.000</option>
+          <option value="10-25000" selected>10 JAM BEST SELLER - Rp25.000</option>
+          <option value="24-${a.hargaRental}">24 Jam - Rp${a.hargaRental.toLocaleString()}</option>
+        </select>
+
+        <label class="text-xs text-zinc-400 mt-3 block">Kode Diskon (khusus member WA)</label>
+        <div class="flex gap-2">
+          <input id="kodeDiskon" placeholder="Ketik WAJOIN50" class="flex-1 bg-zinc-800 p-3 rounded-xl text-sm">
+          <button onclick="cekDiskon()" class="bg-zinc-700 px-4 rounded-xl text-xs font-bold">CEK</button>
+        </div>
+        <p id="infoDiskon" class="text-xs text-green-400 hidden"></p>
+
+        <label class="text-xs text-zinc-400 mt-3 block">Metode Pembayaran</label>
+        <select id="metodeBayar" class="w-full bg-zinc-800 p-3 rounded-xl">${opsiBayar}</select>
+
+        <div class="bg-zinc-800 p-4 rounded-xl mt-4">
+          <div class="flex justify-between text-sm"><span>Harga Awal</span><span id="hargaAwal">Rp25.000</span></div>
+          <div class="flex justify-between text-sm text-green-400"><span>Diskon</span><span id="hargaDiskon">-Rp0</span></div>
+          <div class="flex justify-between font-black text-lg mt-2 border-t border-zinc-700 pt-2"><span>Total Bayar</span><span id="hargaAkhir" class="text-yellow-400">Rp25.000</span></div>
+        </div>
+
+        <button onclick="bayarSekarang(${a.id})" class="w-full bg-yellow-400 text-black py-4 rounded-xl font-black mt-4">BAYAR SEKARANG & BOOKING</button>
+        <button onclick="tutupModal()" class="w-full bg-zinc-800 py-3 rounded-xl mt-2 text-sm">Batal</button>
+      </div>
+    </div>`;
+  document.getElementById('modal').classList.remove('hidden');
+  document.getElementById('durasiSelect').addEventListener('change', updateHarga);
+}
+
+window.updateHarga = function(){
+  let val = document.getElementById('durasiSelect').value.split('-');
+  let harga = parseInt(val[1]);
+  document.getElementById('hargaAwal').innerText = 'Rp'+harga.toLocaleString();
+  cekDiskon();
+}
+
+window.cekDiskon = function(){
+  let kode = document.getElementById('kodeDiskon').value;
+  let hargaAwal = parseInt(document.getElementById('durasiSelect').value.split('-')[1]);
+  let hasil = hitungDiskon(hargaAwal, kode);
+  document.getElementById('hargaDiskon').innerText = '-Rp'+hasil.diskon.toLocaleString();
+  document.getElementById('hargaAkhir').innerText = 'Rp'+hasil.hargaAkhir.toLocaleString();
+  if(hasil.valid){
+    document.getElementById('infoDiskon').classList.remove('hidden');
+    document.getElementById('infoDiskon').innerText = '✅ '+hasil.info+' - Berhasil!';
+  } else if(kode){
+    document.getElementById('infoDiskon').classList.remove('hidden');
+    document.getElementById('infoDiskon').innerText = '❌ Kode tidak valid. Coba WAJOIN50';
+    document.getElementById('infoDiskon').className = 'text-xs text-red-400';
+  }
+}
+
+window.bayarSekarang = function(akunId){
+  let a = dataAkun.find(x=>x.id==akunId);
+  let durasiVal = document.getElementById('durasiSelect').value.split('-');
+  let durasi = parseInt(durasiVal[0]); let hargaAwal = parseInt(durasiVal[1]);
+  let kode = document.getElementById('kodeDiskon').value;
+  let metodeId = document.getElementById('metodeBayar').value;
+  let metode = METODE_BAYAR.find(m=>m.id==metodeId);
+  let hitung = hitungDiskon(hargaAwal, kode);
+  
+  // SIMPAN DATA ORDER MASUK WEBSITE
+  let order = {
+    id: Date.now(), akunId: akunId, akunNama: a.nama,
+    durasi: durasi, hargaAwal: hargaAwal, diskon: hitung.diskon, kodeDiskon: kode,
+    hargaAkhir: hitung.hargaAkhir, metode: metode.nama, metodeDetail: metode.norek,
+    status: "pending", waktu: new Date().toLocaleString('id-ID')
+  };
+  orders.unshift(order);
+  localStorage.setItem('ff_orders', JSON.stringify(orders));
+  
+  // LOCK AKUN
+  a.status='disewa'; a.sewaSampai = Date.now() + durasi*3600000;
+  simpan(); tampil(); tutupModal();
+
+  // TAMPILKAN INVOICE + QRIS
+  document.getElementById('modalIsi').innerHTML = `
+    <div class="p-6 text-center">
+      <h2 class="font-black text-xl">INVOICE #${order.id}</h2>
+      <p class="text-sm text-zinc-400 mt-1">Silahkan bayar via ${metode.nama}</p>
+      <div class="bg-white p-3 rounded-xl mt-4">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(metode.norek+' '+order.hargaAkhir)}" class="mx-auto">
+        <p class="text-black font-bold mt-2 text-sm">${metode.norek}</p>
+        <p class="text-black text-xs">Total: Rp${order.hargaAkhir.toLocaleString()} (${durasi} Jam)</p>
+      </div>
+      <div class="bg-zinc-800 p-3 rounded-xl mt-4 text-left text-xs">
+        Akun: ${a.nama}<br>Durasi: ${durasi} Jam<br>Metode: ${metode.nama}<br>Diskon: Rp${order.diskon.toLocaleString()} (${order.kodeDiskon || '-'})
+      </div>
+      <a href="https://wa.me/${WA_NUMBER}?text=Halo%20min%20saya%20sudah%20transfer%20${order.hargaAkhir}%20untuk%20rental%20${encodeURIComponent(a.nama)}%20Order%20${order.id}%20via%20${metode.nama}" target="_blank" class="block bg-green-500 py-3 rounded-xl font-black mt-4">KONFIRMASI BAYAR VIA WA</a>
+      <button onclick="tutupModal()" class="w-full bg-zinc-800 py-3 rounded-xl mt-2">Tutup</button>
+    </div>`;
+  document.getElementById('modal').classList.remove('hidden');
+}
+
+// ADMIN BISA LIHAT DATA ORDER
+function tampilAdmin(){
+  let htmlOrder = orders.map(o=>`
+    <div class="bg-zinc-800 p-3 rounded-xl text-xs border border-zinc-700">
+      <div class="flex justify-between font-bold"><span>#${o.id} - ${o.akunNama}</span><span class="${o.status=='pending'?'text-yellow-400':'text-green-400'}">${o.status}</span></div>
+      <p class="text-zinc-400 mt-1">${o.waktu} • ${o.durasi} Jam • ${o.metode} • Diskon ${o.kodeDiskon || '-'}</p>
+      <p class="font-black text-yellow-400 mt-1">Bayar: Rp${o.hargaAkhir.toLocaleString()} (Awal Rp${o.hargaAwal.toLocaleString()})</p>
+    </div>`).join('');
+  document.getElementById('listAdmin').innerHTML = htmlOrder + "<hr class='my-4 border-zinc-800'>" + dataAkun.map(a=>`<div class="bg-zinc-900 p-3 rounded-xl flex justify-between items-center"><span class="text-sm">${a.nama} - ${a.status}</span><div class="flex gap-2"><button onclick="setReadyAkun(${a.id})" class="bg-green-600 px-3 py-1 rounded text-xs">Ready</button><button onclick="hapusAkun(${a.id})" class="bg-red-600 px-3 py-1 rounded text-xs">Hapus</button></div></div>`).join('');
+}
+      </script>
+      <!-- IKLAN SALURAN WA - FF STORE.ID -->
+<style>
+@keyframes pulse-wa { 0%{transform:scale(1)} 50%{transform:scale(1.05)} 100%{transform:scale(1)} }
+.pulse-wa{animation:pulse-wa 1.5s infinite}
+</style>
+
+<!-- FLOATING BUTTON KANAN BAWAH -->
+<a href="https://whatsapp.com/channel/0029VbCYsuIFCCoUi0L4gr0N" target="_blank" 
+class="fixed bottom-5 right-5 z-[999] bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full font-black text-sm shadow-2xl flex items-center gap-2 pulse-wa">
+  <span class="text-xl">📢</span> JOIN SALURAN WA
+</a>
+
+<!-- TOP BAR IKLAN -->
+<div class="bg-gradient-to-r from-green-500 to-emerald-600 text-white text-center py-2 px-4 text-xs md:text-sm font-bold sticky top-0 z-[60]">
+  🔥 JOIN SALURAN WA DAPET DISKON 50% RENTAL 10 JAM! KODE: <span class="bg-black text-yellow-400 px-2 py-0.5 rounded">WAJOIN50</span> 
+  <a href="https://whatsapp.com/channel/0029VbCYsuIFCCoUi0L4gr0N" target="_blank" class="bg-black ml-3 px-3 py-1 rounded-full">JOIN SEKARANG →</a>
+</div>
+
+<!-- POPUP MUNCUL 5 DETIK -->
+<div id="popupWA" class="fixed inset-0 bg-black/80 z-[1000] hidden flex items-center justify-center p-4">
+  <div class="bg-zinc-900 border border-zinc-700 rounded-[24px] max-w-sm w-full p-6 text-center relative overflow-hidden">
+    <button onclick="tutupPopupWA()" class="absolute top-4 right-4 bg-zinc-800 w-8 h-8 rounded-full">✕</button>
+    <div class="w-16 h-16 bg-green-500 rounded-full mx-auto flex items-center justify-center text-3xl">📢</div>
+    <h2 class="font-black text-xl mt-4">JOIN SALURAN WA FF STORE.ID</h2>
+    <p class="text-sm text-zinc-400 mt-2">Dapetin update stok 10 akun rental setiap hari + promo diskon 50% cuma di saluran!</p>
+    <div class="bg-zinc-800 rounded-xl p-3 mt-4 text-left text-xs">
+      ✅ Update stok jam 08.00 & 20.00<br>
+      ✅ Voucher WAJOIN50 - Diskon 50%<br>
+      ✅ Giveaway rental gratis tiap Jumat
+    </div>
+    <a href="https://whatsapp.com/channel/0029VbCYsuIFCCoUi0L4gr0N" target="_blank" onclick="tutupPopupWA()" class="block bg-green-500 text-white font-black py-4 rounded-xl mt-5">JOIN SALURAN WA SEKARANG</a>
+    <button onclick="tutupPopupWA()" class="text-xs text-zinc-500 mt-3">Nanti aja</button>
+  </div>
+</div>
+
+<script>
+function tutupPopupWA(){
+  document.getElementById('popupWA').classList.add('hidden');
+  localStorage.setItem('popupWA_closed', Date.now());
+}
+setTimeout(()=>{
+  let last = localStorage.getItem('popupWA_closed') || 0;
+  // Muncul tiap 1 jam sekali
+  if(Date.now() - last > 3600000){
+    document.getElementById('popupWA').classList.remove('hidden');
+  }
+}, 5000); // muncul setelah 5 detik
+</script>
+<!-- END IKLAN SALURAN WA -->
+      <div class="col-span-2 md:col-span-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-4 flex justify-between items-center">
+  <div>
+    <p class="font-black text-sm md:text-base">JOIN SALURAN WA - DISKON 50%</p>
+    <p class="text-xs opacity-90">Ketik WAJOIN50 pas checkout rental</p>
+  </div>
+  <a href="https://whatsapp.com/channel/0029VbCYsuIFCCoUi0L4gr0N" target="_blank" class="bg-black text-white px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap">JOIN WA →</a>
+      </div>
+      <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Akun - FF STORE.ID</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-[#0a0a0a] text-white">
+<header class="border-b border-zinc-800 p-4 flex justify-between sticky top-0 bg-black/90 backdrop-blur z-50">
+  <a href="index.html" class="font-bold"><i class="fa fa-arrow-left"></i> Kembali</a>
+  <a href="https://whatsapp.com/channel/0029VbCYsuIFCCoUi0L4gr0N" target="_blank" class="bg-green-500 px-4 py-1.5 rounded-full text-xs font-black">JOIN SALURAN WA</a>
+</header>
+
+<main class="max-w-6xl mx-auto p-4 grid md:grid-cols-2 gap-6 mt-4">
+  <!-- GALERI -->
+  <div>
+    <img id="fotoUtama" src="" class="w-full h-[380px] object-cover rounded-2xl border border-zinc-800">
+    <div id="galeriThumb" class="flex gap-2 mt-3 overflow-auto"></div>
+  </div>
+
+  <!-- DATA DETAIL PRODUK -->
+  <div>
+    <span id="dStatus" class="text-[10px] px-3 py-1 rounded-full font-bold bg-green-500 text-black">READY</span>
+    <h1 id="dNama" class="font-black text-2xl mt-3 leading-tight"></h1>
+    <p id="dRank" class="text-sm text-zinc-400 mt-1"></p>
+
+    <div class="grid grid-cols-3 gap-2 mt-5">
+      <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center"><p class="text-[10px] text-zinc-500">LEVEL</p><p id="dLevel" class="font-black text-lg"></p></div>
+      <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center"><p class="text-[10px] text-zinc-500">VAULT</p><p id="dVault" class="font-black text-lg"></p></div>
+      <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center"><p class="text-[10px] text-zinc-500">LIKE</p><p id="dLike" class="font-black text-lg"></p></div>
+    </div>
+
+    <!-- HARGA & RENTAL -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 mt-5">
+      <div class="flex justify-between items-center"><span class="text-sm text-zinc-400">Harga Jual</span><span id="dHargaJual" class="font-black text-xl text-yellow-400"></span></div>
+      <div class="border-t border-zinc-800 my-3"></div>
+      <p class="text-xs font-bold">HARGA RENTAL:</p>
+      <div class="grid grid-cols-2 gap-2 mt-2 text-sm">
+        <div class="bg-zinc-800 p-3 rounded-xl flex justify-between"><span>2 Jam</span><b id="dRental2"></b></div>
+        <div class="bg-zinc-800 p-3 rounded-xl flex justify-between"><span>6 Jam</span><b id="dRental6"></b></div>
+        <div class="bg-yellow-400 text-black p-3 rounded-xl flex justify-between font-black col-span-2"><span>10 JAM BEST SELLER</span><b id="dRental10"></b></div>
+        <div class="bg-zinc-800 p-3 rounded-xl flex justify-between col-span-2"><span>24 Jam</span><b id="dRental24"></b></div>
+      </div>
+    </div>
+
+    <!-- DETAIL LENGKAP VAULT -->
+    <div class="mt-5">
+      <h3 class="font-bold text-sm">DETAIL VAULT LENGKAP</h3>
+      <div id="dDetailVault" class="mt-2 bg-zinc-900 border border-zinc-800 rounded-xl p-4 text-sm text-zinc-300 leading-relaxed"></div>
+    </div>
+
+    <!-- TOMBOL AKSI -->
+    <div class="grid grid-cols-2 gap-3 mt-6">
+      <a id="btnBeli" href="#" target="_blank" class="bg-green-500 text-center py-4 rounded-xl font-black"><i class="fab fa-whatsapp"></i> BELI SEKARANG</a>
+      <button id="btnRental" class="bg-yellow-400 text-black py-4 rounded-xl font-black">RENTAL SEKARANG</button>
+    </div>
+
+    <div class="mt-4 bg-green-500/10 border border-green-500/20 rounded-xl p-3 text-xs">
+      <b>Join Saluran WA:</b> Dapet voucher <b>WAJOIN50</b> diskon 50% + update stok tiap hari<br>
+      <a href="https://whatsapp.com/channel/0029VbCYsuIFCCoUi0L4gr0N" target="_blank" class="text-green-400 font-bold underline">https://whatsapp.com/channel/0029VbCYsuIFCCoUi0L4gr0N</a>
+    </div>
+  </div>
+</main>
+
+<!-- PRODUK TERKAIT -->
+<section class="max-w-6xl mx-auto p-4 mt-10">
+  <h3 class="font-black">AKUN LAINNYA</h3>
+  <div id="produkTerkait" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"></div>
+</section>
+
+<script>
+const WA_NUMBER = "6281234567890";
+let dataAkun = JSON.parse(localStorage.getItem('ff_store_v4') || 'null') || [
+  {id:1,nama:"SG2 OPM Ungu Vault 500",rank:"Grandmaster",level:78,vault:500,like:25000,hargaJual:650000,rental:{2:7000,6:15000,10:25000,24:40000},foto:["https://i.imgur.com/8Km9tLL.jpeg","https://i.imgur.com/8Km9tLL.jpeg"],status:"ready",detail:"SG2 Ungu OPM, MP40 Cobra Max Lv5, M1887 OPM, Bundle Cobra Rage, Bundle Old: Saitama, Breakdancer, Emote 120+, Evo Gun 8 Max, Vault 500+ Full Langka. Akun pribadi, bukan hasil hack, data aman."},
+];
+
+function getId(){ return parseInt(new URLSearchParams(window.location.search).get('id')) || 1; }
+
+function loadDetail(){
+  let id = getId();
+  let a = dataAkun.find(x=>x.id==id) || dataAkun[0];
+  
+  document.getElementById('fotoUtama').src = a.foto[0];
+  document.getElementById('galeriThumb').innerHTML = a.foto.map(f=>`<img src="${f}" onclick="document.getElementById('fotoUtama').src='${f}'" class="w-20 h-20 object-cover rounded-xl border border-zinc-800 cursor-pointer">`).join('');
+  document.getElementById('dStatus').innerText = a.status.toUpperCase();
+  document.getElementById('dNama').innerText = a.nama;
+  document.getElementById('dRank').innerText = `${a.rank} • Level ${a.level} • Vault ${a.vault}`;
+  document.getElementById('dLevel').innerText = a.level;
+  document.getElementById('dVault').innerText = a.vault;
+  document.getElementById('dLike').innerText = a.like || '20K+';
+  document.getElementById('dHargaJual').innerText = 'Rp'+a.hargaJual.toLocaleString('id-ID');
+  document.getElementById('dRental2').innerText = 'Rp'+a.rental[2].toLocaleString();
+  document.getElementById('dRental6').innerText = 'Rp'+a.rental[6].toLocaleString();
+  document.getElementById('dRental10').innerText = 'Rp'+a.rental[10].toLocaleString();
+  document.getElementById('dRental24').innerText = 'Rp'+a.rental[24].toLocaleString();
+  document.getElementById('dDetailVault').innerHTML = a.detail.replace(/\n/g,'<br>');
+  document.getElementById('btnBeli').href = `https://wa.me/${WA_NUMBER}?text=Halo%20min%20mau%20BELI%20${encodeURIComponent(a.nama)}%20ID${a.id}`;
+  document.getElementById('btnRental').onclick = ()=> location.href = `index.html#rental-${a.id}`;
+
+  // Produk terkait
+  document.getElementById('produkTerkait').innerHTML = dataAkun.filter(x=>x.id!=id).slice(0,4).map(x=>`
+    <a href="detail.html?id=${x.id}" class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden block">
+      <img src="${x.foto[0]}" class="h-28 w-full object-cover"><div class="p-3"><p class="font-bold text-xs">${x.nama}</p><p class="text-yellow-400 font-black text-sm mt-1">Rp${x.hargaJual.toLocaleString()}</p></div>
+    </a>`).join('');
+}
+loadDetail();
+</script>
+</body>
+</html>
+// Di index.html lu, ganti fungsi bukaDetail jadi:
+window.bukaDetail = function(id){
+  window.location.href = `detail.html?id=${id}`;
+}
+      {
+  id: 1,
+  nama: "SG2 OPM Ungu Vault 500",
+  rank: "Grandmaster",
+  level: 78,
+  vault: 500,
+  like: 25000,
+  hargaJual: 650000,
+  rental: { 2: 7000, 6: 15000, 10: 25000, 24: 40000 },
+  foto: ["link1.jpg", "link2.jpg", "link3.jpg"], // bisa banyak foto
+  status: "ready",
+  detail: `SG2 Ungu OPM
+  MP40 Cobra Max
+  Bundle Old: Breakdancer, Saitama
+  Emote 120+
+  Evo Gun 8 Max`
+}
